@@ -1,0 +1,247 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 134217728 bytes. Error detail: G1 virtual space
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   This process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3825), pid=3520, tid=4060
+#
+# JRE version:  (17.0.11+1) (build )
+# Java VM: OpenJDK 64-Bit Server VM (17.0.11+1-b1207.24, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Djava.rmi.server.hostname=127.0.0.1 -Duser.timezone=UTC -Xmx2048m -Xms128m -Djdbc.classpath=C:\Users\Elina\AppData\Local\Programs\IntelliJ IDEA Ultimate\plugins\DatabaseTools\lib\jdbc-console.jar;C:\Users\Elina\AppData\Roaming\JetBrains\IntelliJIdea2024.1\jdbc-drivers\PostgreSQL\42.6.0\org\postgresql\postgresql\42.6.0\postgresql-42.6.0.jar;C:\Users\Elina\AppData\Roaming\JetBrains\IntelliJIdea2024.1\jdbc-drivers\PostgreSQL\42.6.0\org\checkerframework\checker-qual\3.31.0\checker-qual-3.31.0.jar;C:\Users\Elina\AppData\Roaming\JetBrains\IntelliJIdea2024.1\jdbc-drivers\PostgreSQL\42.6.0\com\github\waffle\waffle-jna\1.9.1\waffle-jna-1.9.1.jar;C:\Users\Elina\AppData\Roaming\JetBrains\IntelliJIdea2024.1\jdbc-drivers\PostgreSQL\42.6.0\net\java\dev\jna\jna\4.5.1\jna-4.5.1.jar;C:\Users\Elina\AppData\Roaming\JetBrains\IntelliJIdea2024.1\jdbc-drivers\PostgreSQL\42.6.0\net\java\dev\jna\jna-platform\4.5.1\jna-platform-4.5.1.jar;C:\Users\Elina\AppData\Roaming\JetBrains\IntelliJIdea2024.1\jdbc-drivers\PostgreSQL\42.6.0\org\slf4j\jcl-over-slf4j\1.7.25\jcl-over-slf4j-1.7.25.jar;C:\Users\Elina\AppData\Roaming\JetBrains\IntelliJIdea2024.1\jdbc-drivers\PostgreSQL\42.6.0\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;C:\Users\Elina\AppData\Roaming\JetBrains\IntelliJIdea2024.1\jdbc-drivers\PostgreSQL\42.6.0\com\github\ben-manes\caffeine\caffeine\2.6.2\caffeine-2.6.2.jar --add-exports=java.desktop/sun.awt=ALL-UNNAMED --add-exports=java.desktop/java.awt.peer=ALL-UNNAMED --add-opens=java.desktop/java.awt=ALL-UNNAMED --add-opens=jdk.unsupported/sun.misc=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED -Dfile.encoding=UTF-8 com.intellij.database.remote.RemoteJdbcServer org.postgresql.Driver
+
+Host: AMD A10-4655M APU with Radeon(tm) HD Graphics  , 4 cores, 7G,  Windows 10 , 64 bit Build 17763 (10.0.17763.4974)
+Time: Wed Jul 24 20:00:06 2024 Mountain Daylight Time elapsed time: 0.028326 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000119f390f410):  JavaThread "Unknown thread" [_thread_in_vm, id=4060, stack(0x0000001307800000,0x0000001307900000)]
+
+Stack: [0x0000001307800000,0x0000001307900000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x6877f9]
+V  [jvm.dll+0x8411aa]
+V  [jvm.dll+0x842e2e]
+V  [jvm.dll+0x843493]
+V  [jvm.dll+0x249fdf]
+V  [jvm.dll+0x6845c9]
+V  [jvm.dll+0x678e7a]
+V  [jvm.dll+0x30ab4b]
+V  [jvm.dll+0x311ff6]
+V  [jvm.dll+0x361a5e]
+V  [jvm.dll+0x361c8f]
+V  [jvm.dll+0x2e0978]
+V  [jvm.dll+0x2e18e4]
+V  [jvm.dll+0x811c71]
+V  [jvm.dll+0x36f7c8]
+V  [jvm.dll+0x7f05f6]
+V  [jvm.dll+0x3f398f]
+V  [jvm.dll+0x3f5541]
+C  [jli.dll+0x528f]
+C  [ucrtbase.dll+0x2268a]
+C  [KERNEL32.DLL+0x17ac4]
+C  [ntdll.dll+0x5a8c1]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ff8a9feefd8, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x00000119f39690d0 GCTaskThread "GC Thread#0" [stack: 0x0000001307900000,0x0000001307a00000] [id=7636]
+  0x00000119f3979fa0 ConcurrentGCThread "G1 Main Marker" [stack: 0x0000001307a00000,0x0000001307b00000] [id=6616]
+  0x00000119f397b490 ConcurrentGCThread "G1 Conc#0" [stack: 0x0000001307b00000,0x0000001307c00000] [id=3604]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff8a97a1547]
+
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00000119f3908b10] Heap_lock - owner thread: 0x00000119f390f410
+
+Heap address: 0x0000000080000000, size: 2048 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 1.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+<Empty>
+
+Heap:
+ garbage-first heap   total 0K, used 0K [0x0000000080000000, 0x0000000100000000)
+  region size 1024K, 0 young (0K), 0 survivors (0K)
+ Metaspace       used 0K, committed 0K, reserved 0K
+  class space    used 0K, committed 0K, reserved 0K
+
+Heap Regions: E=young(eden), S=young(survivor), O=old, HS=humongous(starts), HC=humongous(continues), CS=collection set, F=free, OA=open archive, CA=closed archive, TAMS=top-at-mark-start (previous, next)
+
+Card table byte_map: [0x00000119f7490000,0x00000119f7890000] _byte_map_base: 0x00000119f7090000
+
+Marking Bits (Prev, Next): (CMBitMap*) 0x00000119f3969600, (CMBitMap*) 0x00000119f3969640
+ Prev Bits: [0x00000119f7c90000, 0x00000119f9c90000)
+ Next Bits: [0x00000119f9c90000, 0x00000119fbc90000)
+
+GC Heap History (0 events):
+No events
+
+Dll operation events (1 events):
+Event: 0.016 Loaded shared library C:\Users\Elina\AppData\Local\Programs\IntelliJ IDEA Ultimate\jbr\bin\java.dll
+
+Deoptimization events (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff7ede20000 - 0x00007ff7ede2a000 	C:\Users\Elina\AppData\Local\Programs\IntelliJ IDEA Ultimate\jbr\bin\java.exe
+0x00007ff8ccdd0000 - 0x00007ff8ccfbe000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ff8cc960000 - 0x00007ff8cca13000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ff8c8e70000 - 0x00007ff8c910d000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ff8c9ed0000 - 0x00007ff8c9fca000 	C:\Windows\System32\ucrtbase.dll
+0x00007ff8be390000 - 0x00007ff8be3a7000 	C:\Users\Elina\AppData\Local\Programs\IntelliJ IDEA Ultimate\jbr\bin\jli.dll
+0x00007ff8cbbe0000 - 0x00007ff8cbd77000 	C:\Windows\System32\USER32.dll
+0x00007ff8c9fd0000 - 0x00007ff8c9ff0000 	C:\Windows\System32\win32u.dll
+0x00007ff8cbd90000 - 0x00007ff8cbdb9000 	C:\Windows\System32\GDI32.dll
+0x00007ff8c9520000 - 0x00007ff8c96c8000 	C:\Windows\System32\gdi32full.dll
+0x00007ff8c9480000 - 0x00007ff8c9520000 	C:\Windows\System32\msvcp_win.dll
+0x00007ff8becb0000 - 0x00007ff8bef29000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.17763.6054_none_de72924a534a146d\COMCTL32.dll
+0x00007ff8b8ae0000 - 0x00007ff8b8afb000 	C:\Users\Elina\AppData\Local\Programs\IntelliJ IDEA Ultimate\jbr\bin\VCRUNTIME140.dll
+0x00007ff8cc7f0000 - 0x00007ff8cc88e000 	C:\Windows\System32\msvcrt.dll
+0x00007ff8cc4c0000 - 0x00007ff8cc7ea000 	C:\Windows\System32\combase.dll
+0x00007ff8cc060000 - 0x00007ff8cc178000 	C:\Windows\System32\RPCRT4.dll
+0x00007ff8c91a0000 - 0x00007ff8c9222000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007ff8cc3e0000 - 0x00007ff8cc40e000 	C:\Windows\System32\IMM32.DLL
+0x00007ff8b7b50000 - 0x00007ff8b7b5c000 	C:\Users\Elina\AppData\Local\Programs\IntelliJ IDEA Ultimate\jbr\bin\vcruntime140_1.dll
+0x00007ff8ada00000 - 0x00007ff8ada8d000 	C:\Users\Elina\AppData\Local\Programs\IntelliJ IDEA Ultimate\jbr\bin\msvcp140.dll
+0x00007ff8a94b0000 - 0x00007ff8aa133000 	C:\Users\Elina\AppData\Local\Programs\IntelliJ IDEA Ultimate\jbr\bin\server\jvm.dll
+0x00007ff8cc8b0000 - 0x00007ff8cc958000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ff8ca080000 - 0x00007ff8ca122000 	C:\Windows\System32\sechost.dll
+0x00007ff8c8e40000 - 0x00007ff8c8e66000 	C:\Windows\System32\bcrypt.dll
+0x00007ff8c8da0000 - 0x00007ff8c8dfd000 	C:\Windows\System32\POWRPROF.dll
+0x00007ff8b71d0000 - 0x00007ff8b71d9000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007ff8cbdc0000 - 0x00007ff8cbe2d000 	C:\Windows\System32\WS2_32.dll
+0x00007ff8c1750000 - 0x00007ff8c175a000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ff8c5e30000 - 0x00007ff8c5e54000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ff8c5e00000 - 0x00007ff8c5e2d000 	C:\Windows\SYSTEM32\WINMMBASE.dll
+0x00007ff8c9430000 - 0x00007ff8c947a000 	C:\Windows\System32\cfgmgr32.dll
+0x00007ff8c8e20000 - 0x00007ff8c8e31000 	C:\Windows\System32\kernel.appcore.dll
+0x00007ff8c51a0000 - 0x00007ff8c51aa000 	C:\Users\Elina\AppData\Local\Programs\IntelliJ IDEA Ultimate\jbr\bin\jimage.dll
+0x00007ff8c7770000 - 0x00007ff8c795d000 	C:\Windows\SYSTEM32\DBGHELP.DLL
+0x00007ff8b8110000 - 0x00007ff8b813a000 	C:\Windows\SYSTEM32\dbgcore.DLL
+0x00007ff8c3740000 - 0x00007ff8c3765000 	C:\Users\Elina\AppData\Local\Programs\IntelliJ IDEA Ultimate\jbr\bin\java.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Users\Elina\AppData\Local\Programs\IntelliJ IDEA Ultimate\jbr\bin;C:\Windows\SYSTEM32;C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.17763.6054_none_de72924a534a146d;C:\Users\Elina\AppData\Local\Programs\IntelliJ IDEA Ultimate\jbr\bin\server
+
+VM Arguments:
+jvm_args: -Djava.rmi.server.hostname=127.0.0.1 -Duser.timezone=UTC -Xmx2048m -Xms128m -Djdbc.classpath=C:\Users\Elina\AppData\Local\Programs\IntelliJ IDEA Ultimate\plugins\DatabaseTools\lib\jdbc-console.jar;C:\Users\Elina\AppData\Roaming\JetBrains\IntelliJIdea2024.1\jdbc-drivers\PostgreSQL\42.6.0\org\postgresql\postgresql\42.6.0\postgresql-42.6.0.jar;C:\Users\Elina\AppData\Roaming\JetBrains\IntelliJIdea2024.1\jdbc-drivers\PostgreSQL\42.6.0\org\checkerframework\checker-qual\3.31.0\checker-qual-3.31.0.jar;C:\Users\Elina\AppData\Roaming\JetBrains\IntelliJIdea2024.1\jdbc-drivers\PostgreSQL\42.6.0\com\github\waffle\waffle-jna\1.9.1\waffle-jna-1.9.1.jar;C:\Users\Elina\AppData\Roaming\JetBrains\IntelliJIdea2024.1\jdbc-drivers\PostgreSQL\42.6.0\net\java\dev\jna\jna\4.5.1\jna-4.5.1.jar;C:\Users\Elina\AppData\Roaming\JetBrains\IntelliJIdea2024.1\jdbc-drivers\PostgreSQL\42.6.0\net\java\dev\jna\jna-platform\4.5.1\jna-platform-4.5.1.jar;C:\Users\Elina\AppData\Roaming\JetBrains\IntelliJIdea2024.1\jdbc-drivers\PostgreSQL\42.6.0\org\slf4j\jcl-over-slf4j\1.7.25\jcl-over-slf4j-1.7.25.jar;C:\Users\Elina\AppData\Roaming\JetBrains\IntelliJIdea2024.1\jdbc-drivers\PostgreSQL\42.6.0\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;C:\Users\Elina\AppData\Roaming\JetBrains\IntelliJIdea2024.1\jdbc-drivers\PostgreSQL\42.6.0\com\github\ben-manes\caffeine\caffeine\2.6.2\caffeine-2.6.2.jar --add-exports=java.desktop/sun.awt=ALL-UNNAMED --add-exports=java.desktop/java.awt.peer=ALL-UNNAMED --add-opens=java.desktop/java.awt=ALL-UNNAMED --add-opens=jdk.unsupported/sun.misc=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED -Dfile.encoding=UTF-8 
+java_command: com.intellij.database.remote.RemoteJdbcServer org.postgresql.Driver
+java_class_path (initial): C:\Users\Elina\AppData\Local\Programs\IntelliJ IDEA Ultimate\lib\util_rt.jar;C:\Users\Elina\AppData\Local\Programs\IntelliJ IDEA Ultimate\lib\util-8.jar;C:\Users\Elina\AppData\Local\Programs\IntelliJ IDEA Ultimate\lib\groovy.jar;C:\Users\Elina\AppData\Local\Programs\IntelliJ IDEA Ultimate\plugins\DatabaseTools\lib\jdbc-console.jar;C:\Users\Elina\AppData\Local\Programs\IntelliJ IDEA Ultimate\plugins\grid-core-impl\lib\jdbc-console-types.jar;C:\Users\Elina\AppData\Local\Programs\IntelliJ IDEA Ultimate\lib\util.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 3                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 1                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 4                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 134217728                                 {product} {command line}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 2147483648                                {product} {command line}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 134217728                                 {product} {command line}
+    uintx NonNMethodCodeHeapSize                   = 5832780                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122912730                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122912730                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 2147483648                             {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                           {product lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+PATH=C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Elina\AppData\Local\Microsoft\WindowsApps;C:\Users\Elina\AppData\Local\JetBrains\Toolbox\scripts
+USERNAME=Elina
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 21 Model 16 Stepping 1, AuthenticAMD
+TMP=C:\Users\Elina\AppData\Local\Temp
+TEMP=C:\Users\Elina\AppData\Local\Temp
+
+
+
+Periodic native trim disabled
+
+JNI global refs:
+JNI global refs: 0, weak refs: 0
+
+JNI global refs memory usage: 0, weak refs: 0
+
+Process memory usage:
+Resident Set Size: 10636K (0% of 7543048K total physical memory with 2166560K free physical memory)
+
+OOME stack traces (most recent first):
+Classloader memory used:
+
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 10 , 64 bit Build 17763 (10.0.17763.4974)
+OS uptime: 0 days 3:09 hours
+
+CPU: total 4 (initial active 4) (4 cores per cpu, 1 threads per core) family 21 model 16 stepping 1 microcode 0x0, cx8, cmov, fxsr, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4a, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, aes, clmul, bmi1, fma, vzeroupper, clflush
+Processor Information for all 4 processors :
+  Max Mhz: 2000, Current Mhz: 2000, Mhz Limit: 2000
+
+Memory: 4k page, system-wide physical 7366M (2115M free)
+TotalPageFile size 9414M (AvailPageFile size 109M)
+current process WorkingSet (physical memory assigned to process): 10M, peak: 10M
+current process commit charge ("private bytes"): 52M, peak: 180M
+
+vm_info: OpenJDK 64-Bit Server VM (17.0.11+1-b1207.24) for windows-amd64 JRE (17.0.11+1-b1207.24), built on 2024-05-15 by "builduser" with MS VC++ 16.10 / 16.11 (VS2019)
+
+END.
