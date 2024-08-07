@@ -35,8 +35,8 @@ public class DB_Utility {
      * Create connection method , just checking one connection successful or not
      */
     public static void createConnection(){
-
-        String url      = "jdbc:oracle:thin:@34.207.85.246:1521:XE" ;
+//String url      =  ConfigurationReader.getProperty("hr.db.url"); // Since we have added config.properties and ConfigReader, I can get directly from there as well
+        String url      = "jdbc:oracle:thin:@18.212.167.71:1521:XE" ;
         String username =  "hr";
         String password =  "hr";
 

@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1e5e541-7b0f-407e-a7b4-53b1d62fc704" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="e1e5e541-7b0f-407e-a7b4-53b1d62fc704" name="Changes" comment="day4">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/io/loopcamp/utility/DB_Utility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/loopcamp/utility/DB_Utility.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +24,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ElinaDrozdova&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ElinaDrozdova/JDBC-project&quot;,
+    &quot;accountId&quot;: &quot;74507231-a319-4073-a2fe-99d326beabbf&quot;
+  }
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -44,7 +54,12 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Application.p01_JDBCIntro.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Feature: task02.executor&quot;: &quot;Run&quot;,
+    &quot;Cucumber Java.Scenario: verify users table columns.executor&quot;: &quot;Run&quot;,
     &quot;Database Script.task1_joins.sql.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CukesRunner.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.p01_DBUtilPractice.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.p02_DocuportDBTest.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;ToolWindowServices.ShowToolbar&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
@@ -68,13 +83,39 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="Application.p01_JDBCIntro">
-    <configuration name="p01_JDBCIntro" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="io.loopcamp.jdbctest.day1.p01_JDBCIntro" />
+  <component name="RunManager" selected="JUnit.CukesRunner">
+    <configuration name="Feature: task02" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/task02.feature" />
+      <option name="GLUE" value="io.loopcamp.steps" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="JDBC-project-B3" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
+      <option name="SUGGESTED_NAME" value="Feature: task02" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="io.loopcamp.jdbctest.day1.*" />
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Scenario: verify users table columns" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/task01.feature" />
+      <option name="GLUE" value="io.loopcamp.steps" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="JDBC-project-B3" />
+      <option name="NAME_FILTER" value="^verify users table columns$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^verify users table columns$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: verify users table columns" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -92,9 +133,58 @@
       <script-mode>FILE</script-mode>
       <method v="2" />
     </configuration>
+    <configuration name="CukesRunner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JDBC-project-B3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.loopcamp.runner.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="io.loopcamp.runner" />
+      <option name="MAIN_CLASS_NAME" value="io.loopcamp.runner.CukesRunner" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="p01_DBUtilPractice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JDBC-project-B3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.loopcamp.jdbctest.day02.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="io.loopcamp.jdbctest.day02" />
+      <option name="MAIN_CLASS_NAME" value="io.loopcamp.jdbctest.day02.p01_DBUtilPractice" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="p02_DocuportDBTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JDBC-project-B3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.loopcamp.jdbctest.day02.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="io.loopcamp.jdbctest.day02" />
+      <option name="MAIN_CLASS_NAME" value="io.loopcamp.jdbctest.day02.p02_DocuportDBTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.p01_JDBCIntro" />
+        <item itemvalue="JUnit.CukesRunner" />
+        <item itemvalue="Cucumber Java.Feature: task02" />
+        <item itemvalue="Cucumber Java.Scenario: verify users table columns" />
+        <item itemvalue="JUnit.p02_DocuportDBTest" />
+        <item itemvalue="JUnit.p01_DBUtilPractice" />
       </list>
     </recent_temporary>
   </component>
@@ -126,7 +216,22 @@
       <workItem from="1722087773130" duration="11362000" />
       <workItem from="1722280921311" duration="36000" />
       <workItem from="1722296721216" duration="184000" />
+      <workItem from="1722467818606" duration="4960000" />
+      <workItem from="1722473696838" duration="6203000" />
+      <workItem from="1722541880870" duration="187000" />
+      <workItem from="1722692723279" duration="14666000" />
+      <workItem from="1722892223999" duration="23000" />
+      <workItem from="1723056914270" duration="4909000" />
     </task>
+    <task id="LOCAL-00001" summary="day4">
+      <option name="closed" value="true" />
+      <created>1722467892749</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1722467892749</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,5 +247,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="day4" />
+    <option name="LAST_COMMIT_MESSAGE" value="day4" />
   </component>
 </project>
